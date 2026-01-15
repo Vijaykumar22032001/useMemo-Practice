@@ -4,7 +4,7 @@ A React application that displays a searchable directory of users fetched from a
 
 ## Screenshot
 
-![UserDirectory Screenshot](./src/assets/Screenshot%202026-01-15%20at%2011.30.43%20AM.png)
+![UserDirectory Screenshot](./src/assets/screenshot.png)
 
 ## Features
 
