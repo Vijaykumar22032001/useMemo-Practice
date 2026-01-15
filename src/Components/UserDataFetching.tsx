@@ -1,8 +1,17 @@
-import React, { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import UsersDataUI from "./UsersDataUI";
 
+interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  image: string;
+}
+
 const UserDataFetching = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [SearchTerm, setSearchTerm] = useState("");
   const fetchUsers = async () => {
@@ -36,7 +45,7 @@ const UserDataFetching = () => {
 
   return (
     <>
-      <UsersDataUI users={filterUsers} loading={loading} />
+      <UsersDataUI users={filterUsers} loading={loading} setSearchTerm={setSearchTerm} />
     </>
   );
 };

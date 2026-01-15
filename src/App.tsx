@@ -1,6 +1,5 @@
 
 import './App.css'
-import Users from './Components/useMemoPractice'
 import UserDataFetching from './Components/UserDataFetching'
 
 

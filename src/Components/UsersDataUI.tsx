@@ -1,4 +1,19 @@
-const UsersDataUI = ({ users, loading }) => {
+interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  image: string;
+}
+
+interface UsersDataUIProps {
+  users: User[];
+  loading: boolean;
+  setSearchTerm: (term: string) => void;
+}
+
+const UsersDataUI = ({ users, loading, setSearchTerm }: UsersDataUIProps) => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       {/* HEADER */}
